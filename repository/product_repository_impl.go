@@ -47,8 +47,8 @@ func (repository *productRepositoryImpl) FindAll() (products []entity.Product) {
 		products = append(products, entity.Product{
 			Id:       document["_id"].(string),
 			Name:     document["name"].(string),
-			Price:    document["price"].(int64),
-			Quantity: document["quantity"].(int32),
+			Price:    document["price"].(int),
+			Quantity: document["quantity"].(int),
 		})
 	}
 
